@@ -1,0 +1,24 @@
+﻿@model List<OrganizationModel>
+    @{
+    ViewData["Title"] = "Goods";
+    }
+
+    <h2 style="font-size:14px;">All Organizations</h2>
+    <table style="border:3px solid black;border-collapse:collapse;border-bottom:3px solid black;">
+        <tr>
+            <td style="padding:5px">Name</td>
+            <td style="padding:5px">Director</td>
+            <td style="padding:5px">Address</td>
+            <td style="padding:5px">Phone_number</td>
+        </tr>
+        @foreach (var cl in Model)
+    {
+        <tr>
+            <td style="padding:5px">@cl.Name</td>
+            <td style="padding:5px">@cl.Director</td>
+            <td style="padding:5px">@cl.Address</td>
+            <td style="padding:5px">@cl.Phone_number</td>
+        </tr>
+    }
+        <tr></tr>
+    </table>

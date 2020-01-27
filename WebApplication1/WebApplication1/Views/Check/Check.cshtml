@@ -1,0 +1,26 @@
+﻿@model List<CheckModel>
+    @{
+    ViewData["Title"] = "Check";
+    }
+
+    <h2 style="font-size:14px;">All Cheks</h2>
+    <table style="border:3px solid black;border-collapse:collapse;border-bottom:3px solid black;">
+        <tr>
+            <td style="padding:5px">Date</td>
+            <td style="padding:5px">Price</td>
+            <td style="padding:5px">Sale</td>
+            
+        </tr>
+       
+        @foreach (var cl in Model)
+    {
+        <tr>
+            <td style="padding:5px">@cl.Date.ToShortDateString()</td>
+            <td style="padding:5px">@cl.Price</td>
+            <td style="padding:5px">@cl.Sale</td>
+           
+        </tr>
+    }
+        <tr></tr>
+    </table>
+

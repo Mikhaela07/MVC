@@ -1,0 +1,24 @@
+﻿@model List<GoodsModel>
+    @{
+    ViewData["Title"] = "Goods";
+    }
+
+    <h2 ">All Goods</h2>
+    <table style="border:3px solid black;border-collapse:collapse;">
+        <tr>
+            <td style="padding:5px">Goods</td>
+            <td style="padding:5px">Unit</td>
+            <td style="padding:5px">Quantity</td>
+            <td style="padding:5px">Description</td>
+        </tr>
+        @foreach (var cl in Model)
+    {
+        <tr>
+            <td style="padding:5px">@cl.Goods</td>
+            <td style="padding:5px">@cl.Unit</td>
+            <td style="padding:5px">@cl.Quantity</td>
+            <td style="padding:5px">@cl.Description</td>
+        </tr>
+    }
+        <tr></tr>
+    </table>
